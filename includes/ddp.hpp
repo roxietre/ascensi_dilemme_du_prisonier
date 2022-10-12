@@ -20,9 +20,11 @@ enum prisonner_decision {
 
 class IRuler {
     public:
-        virtual ~IRuler() = default;
-        virtual std::pair<int,int> calculate(prisonner_decision prisonner1_decision, prisonner_decision prisonner2_decision) = 0;
-    }
+        IRuler() = default;
+        ~IRuler() = default;
+        std::pair<int,int> calculate(prisonner_decision prisonner1_decision, prisonner_decision prisonner2_decision);
+    private:
+};
 
 
 class ddp {
@@ -31,6 +33,8 @@ class ddp {
         ~ddp();
     protected:
     private:
+        std::vector<std::pair<int,int>> _score;
+        std::vector<IRuler> _rulers;
 };
 
 #endif /* !DDP_HPP_ */
