@@ -9,13 +9,15 @@
 #define SILENTACTION_HPP_
 
 #include "IAction.hpp"
-#include <rand>
+#include <cstdlib>
 
-class randomAction: public IAction {
+class RandomAction: public IAction {
     public:
-        randomAction();
-        ~randomAction();
+        RandomAction();
+        ~RandomAction();
         prisonner_decision getAction();
     protected:
     private:
 };
+
+#endif

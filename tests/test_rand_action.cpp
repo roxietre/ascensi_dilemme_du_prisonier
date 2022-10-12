@@ -9,9 +9,7 @@
 #include <criterion/redirect.h>
 #include "RandomAction.hpp"
 
-#include <rand>
-
-Test (rand_action, test_rand_action, .init=redirect_all_std)
+Test (rand_action, test_rand_action)
 {
     srand (time(0));
     int i = rand() % 2;

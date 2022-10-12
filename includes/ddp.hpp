@@ -12,19 +12,7 @@
 #include <utility>
 #include <vector>
 
-enum prisonner_decision {
-    SILENCE,
-    BETRAY
-};
-
-
-class IRuler {
-    public:
-        IRuler() = default;
-        ~IRuler() = default;
-        std::pair<int,int> calculate(prisonner_decision prisonner1_decision, prisonner_decision prisonner2_decision);
-    private:
-};
+#include "IRuler.hpp"
 
 
 class ddp {

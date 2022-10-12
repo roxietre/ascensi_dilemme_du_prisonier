@@ -13,11 +13,15 @@ LIB_DIR			=	lib/sm_libc/
 
 SRC_FILES		=	ddp.cpp			 \
 					SilentAction.cpp \
+					RandomAction.cpp \
+					Historique.cpp		\
 
 SRC_FILES_MAIN	=	main.cpp			\
 
 TEST_FILES		=	test_ddp.cpp		\
 					test_SilenceAction.cpp \
+					test_rand_action.cpp	\
+					test_historique.cpp		\
 
 SRC				=	$(addprefix $(SRC_DIR), $(SRC_FILES))
 
