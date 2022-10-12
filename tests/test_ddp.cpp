@@ -7,7 +7,7 @@
 
 #include <criterion/criterion.h>
 #include <criterion/redirect.h>
-#include "ddp.hpp"
+#include "IRuler.hpp"
 
 #include <utility>
 

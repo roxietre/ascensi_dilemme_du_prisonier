@@ -18,6 +18,7 @@ class Historique {
         void addRound(prisonner_decision p1, prisonner_decision p2);
         std::pair<prisonner_decision, prisonner_decision> getLastRound();
         std::vector<std::pair<prisonner_decision, prisonner_decision>> getRounds();
+        std::pair<int, int> getScore();
     protected:
     private:
         std::vector<std::pair<prisonner_decision, prisonner_decision>> _rounds;

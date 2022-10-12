@@ -12,15 +12,16 @@
 #include "ddp.hpp"
 
 #include <utility>
+#include <iostream>
 
 Test(historique, test_last_round)
 {
     Historique * historique = new Historique;
 
-    historique->addRound(SILENCE, BETRAY);
+    historique->addRound(SILENCE, SILENCE);
     std::pair<prisonner_decision, prisonner_decision> lastRound = historique->getLastRound();
     cr_assert_eq(lastRound.first, SILENCE);
-    cr_assert_eq(lastRound.second, BETRAY);
+    cr_assert_eq(lastRound.second, SILENCE);
 }
 
 Test(historique, test_all_historique)
@@ -32,4 +33,14 @@ Test(historique, test_all_historique)
     std::vector<std::pair<prisonner_decision, prisonner_decision>> rounds = historique->getRounds();
     cr_assert_eq(rounds[0].first, SILENCE);
     cr_assert_eq(rounds[1].first, BETRAY);
+}
+
+Test(historique, test_score)
+{
+    Historique * historique = new Historique;
+
+    historique->addRound(SILENCE, BETRAY);
+    std::pair<int, int> score = historique->getScore();
+    cr_assert_eq(score.first, -10);
+    cr_assert_eq(score.second, 0);
 }
