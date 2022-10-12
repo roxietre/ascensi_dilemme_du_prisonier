@@ -11,11 +11,13 @@ TEST_DIR		=	tests/
 
 LIB_DIR			=	lib/sm_libc/
 
-SRC_FILES		=	ddp.cpp			\
+SRC_FILES		=	ddp.cpp			 \
+					SilentAction.cpp \
 
 SRC_FILES_MAIN	=	main.cpp			\
 
 TEST_FILES		=	test_ddp.cpp		\
+					test_SilenceAction.cpp \
 
 SRC				=	$(addprefix $(SRC_DIR), $(SRC_FILES))
 
