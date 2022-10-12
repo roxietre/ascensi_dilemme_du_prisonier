@@ -16,6 +16,7 @@ class RandomAction: public IAction {
         RandomAction();
         ~RandomAction();
         prisonner_decision getAction();
+        virtual prisonner_decision getAction(std::pair<prisonner_decision, prisonner_decision>){return SILENCE;};
     protected:
     private:
 };

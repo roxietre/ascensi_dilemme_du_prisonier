@@ -15,7 +15,7 @@ class IAction {
         virtual ~IAction() = default;
 
         virtual prisonner_decision getAction() = 0;
-
+        virtual prisonner_decision getAction(std::pair<prisonner_decision, prisonner_decision>) = 0;
     protected:
     private:
 };
